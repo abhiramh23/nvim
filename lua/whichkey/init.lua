@@ -4,7 +4,7 @@ local wk = require("which-key")
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 local mappings = {
-    q = { ":q<cr>", "Quit" },
+    q = { ":q!<cr>", "Quit" },
     Q = { ":wq<cr>", "Save & Quit" },
     w = { ":w<cr>", "Save" },
     -- x = { "<Cmd>BufferClose<CR>", "Close" },

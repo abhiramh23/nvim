@@ -52,7 +52,10 @@ return {
   { "stevearc/dressing.nvim",      lazy = true },
   {
     "ziontee113/icon-picker.nvim",
+    config = true,
+    dependencies = "stevearc/dressing.nvim",
     lazy = true,
+    cmd = "IconPickerInsert",
     opts = { disable_legacy_commands = true }
   },
   {
@@ -143,7 +146,6 @@ return {
   -- gitsign
   {
     "lewis6991/gitsigns.nvim",
-    lazy = true,
     config = function()
       require("gitsigns").setup({ current_line_blame = true })
     end
@@ -157,6 +159,7 @@ return {
       "tsakirist/telescope-lazy.nvim",
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
       "debugloop/telescope-undo.nvim",
+      'nvim-telescope/telescope-ui-select.nvim',
       'piersolenski/telescope-import.nvim',
       "nvim-telescope/telescope-github.nvim",
       "smartpde/telescope-recent-files",
@@ -178,6 +181,7 @@ return {
       require("telescope").load_extension("recent_files")
       require("telescope").load_extension("yank_history")
       require("telescope").load_extension("heading")
+      require("telescope").load_extension("ui-select")
     end,
     opts = {
       extensions = {
@@ -273,7 +277,7 @@ return {
       'antosha417/nvim-lsp-file-operations',
     },
     keys = {
-      { "<C-f>", "<cmd>NvimTreeToggle<cr>", desc = "NeoTree" },
+      { "<C-f>", "<cmd>NvimTreeToggle<cr>", desc = "Tree view" },
     },
     config = function()
       require("nvim-tree").setup({
