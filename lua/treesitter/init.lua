@@ -19,7 +19,6 @@ configs.setup({
     sync_install = false,
     highlight = { enable = true },
     indent = { enable = true },
-    tree_docs = { enable = true },
     textobjects = {
         swap = {
             enable = true,

@@ -94,7 +94,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     lazy = true,
     build = ":TSUpdate",
-    dependencies = { 'nvim-treesitter/nvim-tree-docs',
+    dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
       'nvim-treesitter/nvim-treesitter-textobjects',
       "nvim-treesitter/nvim-treesitter-refactor",
