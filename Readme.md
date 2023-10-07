@@ -1,4 +1,20 @@
 # :star:PLUGINS FOR NEOVIM
 
-neovim plugins using **lazy plugin manager** in *lua*
-[here you can visit](<https://github.com/folke/lazy.nvim>)
+Table Of Context
+
+- Introduction
+- Requirement
+
+## Introduction
+
+Neovim plugins using **lazy plugin manager** in *lua* [you can visit](<https://github.com/folke/lazy.nvim>)
+
+## Requirement
+
+- fd
+- ripgrep
+- fzf
+- treesitter-cli
+- git
+- nodejs / npm
+- gcc / mingw / cc /clang /cl /zig
