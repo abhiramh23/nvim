@@ -15,7 +15,7 @@ return {
 			require("whichkey")
 		end,
 	},
-	{ "folke/neoconf.nvim",    lazy = true, cmd = "Neoconf" },
+	{ "folke/neoconf.nvim", lazy = true, cmd = "Neoconf" },
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{
 		"folke/noice.nvim",
@@ -49,7 +49,7 @@ return {
 			"rcarriga/nvim-notify",
 		},
 	},
-	{ "stevearc/dressing.nvim",      lazy = true },
+	{ "stevearc/dressing.nvim", lazy = true },
 	{
 		"ziontee113/icon-picker.nvim",
 		config = true,
@@ -171,7 +171,7 @@ return {
 					-- Other telescope configuration options
 				},
 				fzf = {
-					fuzzy = true,    -- false will only do exact matching
+					fuzzy = true, -- false will only do exact matching
 					override_generic_sorter = true, -- override the generic sorter
 					override_file_sorter = true, -- override the file sorter
 					case_mode = "smart_case", -- or "ignore_case" or "respect_case"
@@ -304,6 +304,20 @@ return {
 		end,
 	},
 	-- lsp
+	{ "kkharji/lspsaga.nvim", config = true },
+	{
+		"mfussenegger/nvim-lint",
+		config = function()
+			require("lint").linters_by_ft = {
+				lua = { "luacheck" },
+			}
+			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+				callback = function()
+					require("lint").try_lint()
+				end,
+			})
+		end,
+	},
 	{
 		"williamboman/mason.nvim",
 		dependencies = {
@@ -450,7 +464,7 @@ return {
 			vim.g.startuptime_tries = 10
 		end,
 	},
-	{ "ellisonleao/glow.nvim",               lazy = true,  config = true, cmd = "Glow" },
+	{ "ellisonleao/glow.nvim", lazy = true, config = true, cmd = "Glow" },
 	{
 		"akinsho/toggleterm.nvim",
 		config = true,
