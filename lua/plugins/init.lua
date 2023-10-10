@@ -70,7 +70,16 @@ return {
 			"nvim-treesitter/nvim-treesitter-context",
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"nvim-treesitter/nvim-treesitter-refactor",
-			"JoosepAlviste/nvim-ts-context-commentstring",
+			{
+				"JoosepAlviste/nvim-ts-context-commentstring",
+				lazy = true,
+				opts = {
+					enable_autocmd = false,
+				},
+				config = function()
+					require("ts_context_commentstring").setup({})
+				end,
+			},
 		},
 		config = function()
 			pcall(require, "treesitter")
@@ -280,7 +289,19 @@ return {
 
 			{
 				"L3MON4D3/LuaSnip",
-				dependencies = { "rafamadriz/friendly-snippets", "saadparwaiz1/cmp_luasnip" },
+				opts = {
+					history = true,
+					delete_check_events = "TextChanged",
+				},
+				dependencies = {
+					{
+						"rafamadriz/friendly-snippets",
+						config = function()
+							require("luasnip.loaders.from_vscode").lazy_load()
+						end,
+					},
+					"saadparwaiz1/cmp_luasnip",
+				},
 			},
 			"onsails/lspkind.nvim",
 			"hrsh7th/cmp-buffer",
@@ -326,6 +347,7 @@ return {
 			},
 			{
 				"junnplus/lsp-setup.nvim",
+				lazy = true,
 				config = function()
 					require("lsp")
 				end,
@@ -503,7 +525,6 @@ return {
 	{
 		"folke/flash.nvim",
 		lazy = true,
-		event = "VeryLazy",
 		opts = {},
 		keys = {
 			{

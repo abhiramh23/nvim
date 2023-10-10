@@ -1,8 +1,8 @@
 local wk = require("which-key")
 -- wk.register(mappings, opts)
 
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
+--local map = vim.api.nvim_set_keymap
+--local opts = { noremap = true, silent = true }
 local mappings = {
 	q = { ":q!<cr>", "Quit" },
 	Q = { ":wq<cr>", "Save & Quit" },
