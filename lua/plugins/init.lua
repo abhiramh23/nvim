@@ -4,8 +4,8 @@ return {
 		lazy = true,
 	},
 
-	{ "folke/neoconf.nvim",     lazy = true, cmd = "Neoconf" },
-	{ "nvim-lua/plenary.nvim",  lazy = true },
+	{ "folke/neoconf.nvim", lazy = true, cmd = "Neoconf" },
+	{ "nvim-lua/plenary.nvim", lazy = true },
 
 	{ "stevearc/dressing.nvim", lazy = true },
 	{
@@ -43,18 +43,13 @@ return {
 		end,
 	},
 	-- lsp
-	{ "kkharji/lspsaga.nvim",        config = true },
-
-	{
-		"neovim/nvim-lspconfig",
-		dependencies = { "nanotee/nvim-lsp-basics" },
-	},
+	{ "kkharji/lspsaga.nvim", config = true },
 	{
 		"gen740/SmoothCursor.nvim",
 		config = function()
 			require("smoothcursor").setup()
 		end,
 	},
-	{ "ellisonleao/glow.nvim",               lazy = true,  config = true, cmd = "Glow" },
+	{ "ellisonleao/glow.nvim", lazy = true, config = true, cmd = "Glow" },
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 }

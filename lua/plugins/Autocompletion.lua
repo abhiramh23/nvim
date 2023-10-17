@@ -33,9 +33,9 @@ return {
         "f3fora/cmp-spell",
         -- "hrsh7th/cmp-emoji",
         -- "chrisgrieser/cmp-nerdfont",
-        -- "ray-x/cmp-treesitter",
-        -- "hrsh7th/cmp-nvim-lsp-document-symbol",
-        -- "hrsh7th/cmp-nvim-lsp-signature-help",
+        "ray-x/cmp-treesitter",
+        "hrsh7th/cmp-nvim-lsp-document-symbol",
+        "hrsh7th/cmp-nvim-lsp-signature-help",
         "lukas-reineke/cmp-under-comparator",
     },
     config = function()
