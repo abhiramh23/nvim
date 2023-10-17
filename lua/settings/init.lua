@@ -1,5 +1,4 @@
 local options = {
-    syntax = "off",
     backup = false,                                 -- creates a backup file
     clipboard = "unnamedplus",                      -- allows neovim to access the system clipboard
     cmdheight = 1,                                  -- more space in the neovim command line for displaying messages
@@ -51,7 +50,7 @@ local options = {
     fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]],
     winwidth = 10,
     winminwidth = 10,
-    equalalways = false,
+    equalalways = true,
     breakindent = true,
     hlsearch = false,
 
@@ -65,16 +64,6 @@ vim.opt.fillchars = vim.opt.fillchars + "eob: "
 vim.opt.fillchars:append({
     stl = " ",
 })
-vim.opt.shortmess:append("c")
-vim.opt.list = true
-vim.opt.listchars:append "eol:↴"
-vim.opt.listchars:append "space:⋅"
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
-vim.g.completeopt = "menu,menuone,noselect,noinsert"
--- Global mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
--- vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
--- vim.keymap.set('n', '[d', vim
-

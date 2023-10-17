@@ -1,5 +1,5 @@
 local configs = require("nvim-treesitter.configs")
-
+require("nvim-treesitter.install").prefer_git = true
 configs.setup({
 	ensure_installed = {
 		"c",
