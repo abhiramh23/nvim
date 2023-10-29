@@ -3,10 +3,8 @@ return {
 		"folke/neodev.nvim",
 		lazy = true,
 	},
-
 	{ "folke/neoconf.nvim", lazy = true, cmd = "Neoconf" },
 	{ "nvim-lua/plenary.nvim", lazy = true },
-
 	{ "stevearc/dressing.nvim", lazy = true },
 	{
 		"gbprod/yanky.nvim",
@@ -22,9 +20,7 @@ return {
 	-- gitsign
 	{
 		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup({ current_line_blame = true })
-		end,
+		opts = { current_line_blame = true },
 	},
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
@@ -38,6 +34,7 @@ return {
 	{
 		"windwp/nvim-autopairs",
 		lazy = true,
+		event = "InsertEnter",
 		config = function()
 			require("autopair")
 		end,
@@ -51,5 +48,4 @@ return {
 		end,
 	},
 	{ "ellisonleao/glow.nvim", lazy = true, config = true, cmd = "Glow" },
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 }
