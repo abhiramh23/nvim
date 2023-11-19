@@ -7,6 +7,7 @@ local mappings = {
 	q = { ":q!<cr>", "Quit" },
 	Q = { ":wq<cr>", "Save & Quit" },
 	w = { ":w<cr>", "Save" },
+	O = { ":NvimTreeToggle<cr>", "Open Files" },
 	-- x = { "<Cmd>BufferClose<CR>", "Close" },
 	-- R = { "<Cmd>BufferRestore<CR>", "Restore" },
 	-- p = { "<Cmd>BufferPin<CR>", "Pin/Unpin" },

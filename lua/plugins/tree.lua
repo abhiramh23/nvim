@@ -6,9 +6,7 @@ return {
         "nvim-tree/nvim-web-devicons",
         "antosha417/nvim-lsp-file-operations",
     },
-    keys = {
-        { "<C-f>", "<cmd>NvimTreeToggle<cr>", desc = "Tree view" },
-    },
+    cmd = "NvimTreeToggle",
     config = function()
         require("nvim-tree").setup({
             sort_by = "case_sensitive",

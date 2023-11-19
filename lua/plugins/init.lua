@@ -3,8 +3,8 @@ return {
 		"folke/neodev.nvim",
 		lazy = true,
 	},
-	{ "folke/neoconf.nvim", lazy = true, cmd = "Neoconf" },
-	{ "nvim-lua/plenary.nvim", lazy = true },
+	{ "folke/neoconf.nvim",     lazy = true, cmd = "Neoconf" },
+	{ "nvim-lua/plenary.nvim",  lazy = true },
 	{ "stevearc/dressing.nvim", lazy = true },
 	{
 		"gbprod/yanky.nvim",
@@ -40,12 +40,7 @@ return {
 		end,
 	},
 	-- lsp
-	{ "kkharji/lspsaga.nvim", config = true },
-	{
-		"gen740/SmoothCursor.nvim",
-		config = function()
-			require("smoothcursor").setup()
-		end,
-	},
-	{ "ellisonleao/glow.nvim", lazy = true, config = true, cmd = "Glow" },
+	{ "kkharji/lspsaga.nvim",        config = true },
+
+	{ "ellisonleao/glow.nvim",       lazy = true,  config = true, cmd = "Glow" },
 }
