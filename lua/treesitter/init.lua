@@ -1,6 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 require("nvim-treesitter.install").prefer_git = true
-require("nvim-treesitter.install").compilers = { "clang", "gcc" }
+-- require("nvim-treesitter.install").compilers = { "clang", "gcc" }
 configs.setup({
 	auto_install = true,
 	ensure_installed = {
@@ -18,6 +18,18 @@ configs.setup({
 		"markdown_inline",
 		"markdown",
 		"rst",
+		"json",
+		"git_config",
+		"git_rebase",
+		"gitattributes",
+		"gitcommit",
+		"gitignore",
+		"json5",
+		"julia",
+		"csv",
+		"comment",
+		"php",
+		"c_sharp",
 	},
 	sync_install = true,
 	highlight = { enable = true },
