@@ -11,6 +11,7 @@ return {
     "nvim-telescope/telescope-github.nvim",
     "smartpde/telescope-recent-files",
     "crispgm/telescope-heading.nvim",
+    "lpoto/telescope-tasks.nvim",
     -- lazygit
     {
       "kdheepak/lazygit.nvim",
@@ -30,6 +31,9 @@ return {
     require("telescope").load_extension("yank_history")
     require("telescope").load_extension("heading")
     require("telescope").load_extension("ui-select")
+    require("telescope").load_extension("tasks")
+    local default = require('telescope').extensions.tasks.generators.default
+    default.all()
   end,
   opts = {
     extensions = {
@@ -69,6 +73,20 @@ return {
       },
       heading = {
         treesitter = true,
+      },
+      tasks = {
+        theme = "tokyonight",
+        output = {
+          style = "float",   -- "split" | "float" | "tab"
+          layout = "center", -- "left" | "right" | "center" | "below" | "above"
+          scale = 0.4,       -- output window to editor size ratio
+          -- NOTE: scale and "center" layout are only relevant when style == "float"
+        },
+        binary = {
+          -- Example binary used when running python projects
+          python = "python",
+          -- ...
+        },
       },
       file_browser = {
         theme = "tokyonight",
