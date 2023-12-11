@@ -15,11 +15,11 @@ local mappings = {
 	L = { ":e ~/AppData/Local/nvim/lua/plugins/init.lua<cr>", "Edit plugins" },
 	f = { ":Telescope find_files<cr>", "Telescope Find Files" },
 	r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
-	i = { "<cmd>IconPickerInsert<cr>", "IconPickerInsert" },
+	I = { "<cmd>IconPickerInsert<cr>", "IconPickerInsert" },
 	t = {
 		name = "terminal",
-		t = { "<cmd>ToggleTerm<CR>", "Terminal" },
-		p = { '<cmd> TermExec cmd="python %" <CR>', "python" },
+		t = { '<cmd> ToggleTerm<cr>', " " },
+		p = { '<cmd> TermExec cmd="python %" <CR>', "" },
 		l = { "<cmd>LazyGit<CR>", "LazyGit" },
 	},
 	l = {

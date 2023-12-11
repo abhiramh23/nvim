@@ -1,11 +1,8 @@
 return {
-	{
-		"folke/neodev.nvim",
-		lazy = true,
-	},
 	{ "folke/neoconf.nvim",     lazy = true, cmd = "Neoconf" },
 	{ "nvim-lua/plenary.nvim",  lazy = true },
 	{ "stevearc/dressing.nvim", lazy = true },
+	{ "nvim-lua/popup.nvim",    lazy = true },
 	{
 		"gbprod/yanky.nvim",
 		config = true,
@@ -29,14 +26,6 @@ return {
 			require("notifier").setup({
 				-- You configuration here
 			})
-		end,
-	},
-	{
-		"windwp/nvim-autopairs",
-		lazy = true,
-		event = "InsertEnter",
-		config = function()
-			require("autopair")
 		end,
 	},
 	-- lsp

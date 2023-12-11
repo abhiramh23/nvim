@@ -11,7 +11,22 @@ return {
     "nvim-telescope/telescope-github.nvim",
     "smartpde/telescope-recent-files",
     "crispgm/telescope-heading.nvim",
+    "nat-418/telescope-color-names.nvim",
+    'nvim-telescope/telescope-symbols.nvim',
     "lpoto/telescope-tasks.nvim",
+    "nvim-telescope/telescope-project.nvim",
+    {
+      "da-moon/telescope-toggleterm.nvim",
+      event = "TermOpen",
+      config = function()
+        require("telescope-toggleterm").setup {
+          telescope_mappings = {
+            -- <ctrl-c> : kill the terminal buffer (default) .
+            ["<C-c>"] = require("telescope-toggleterm").actions.exit_terminal,
+          },
+        }
+      end
+    },
     -- lazygit
     {
       "kdheepak/lazygit.nvim",
@@ -32,6 +47,11 @@ return {
     require("telescope").load_extension("heading")
     require("telescope").load_extension("ui-select")
     require("telescope").load_extension("tasks")
+    require('telescope').load_extension('color_names')
+    require('telescope').load_extension('luasnip')
+    require("telescope").load_extension("toggleterm")
+    require('telescope').load_extension('project')
+    require('telescope').load_extension('projects')
     local default = require('telescope').extensions.tasks.generators.default
     default.all()
   end,

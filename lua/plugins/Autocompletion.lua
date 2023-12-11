@@ -4,9 +4,18 @@ return {
     lazy = true,
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
-
+        {
+            "windwp/nvim-autopairs",
+            lazy = true,
+            event = "InsertEnter",
+            config = function()
+                require("autopair")
+            end,
+        },
         {
             "L3MON4D3/LuaSnip",
+            version = "v2.*",
+            build = "make install_jsregexp",
             opts = {
                 history = true,
                 delete_check_events = "TextChanged",
@@ -31,8 +40,8 @@ return {
         -- "amarakon/nvim-cmp-buffer-lines",
         -- "uga-rosa/cmp-dictionary",
         "f3fora/cmp-spell",
-        -- "hrsh7th/cmp-emoji",
-        -- "chrisgrieser/cmp-nerdfont",
+        "hrsh7th/cmp-emoji",
+        "chrisgrieser/cmp-nerdfont",
         "ray-x/cmp-treesitter",
         "hrsh7th/cmp-nvim-lsp-document-symbol",
         "hrsh7th/cmp-nvim-lsp-signature-help",
