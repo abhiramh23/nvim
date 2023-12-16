@@ -18,3 +18,6 @@ Neovim plugins using **lazy plugin manager** in *lua* [you can visit](<https://g
 - git
 - nodejs / npm
 - gcc / mingw / cc /clang /cl /zig
+- deno
+
+[my config](init.lua)
