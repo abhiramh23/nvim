@@ -4,5 +4,7 @@ return {
     dependencies = "stevearc/dressing.nvim",
     lazy = true,
     cmd = "IconPickerInsert",
-    opts = { disable_legacy_commands = true },
+    opts = {
+        disable_legacy_commands = true,
+    },
 }
