@@ -27,6 +27,11 @@ return {
         }
       end
     },
+    -- browser
+    {
+      "nvim-telescope/telescope-file-browser.nvim",
+      lazy = true,
+    },
     -- lazygit
     {
       "kdheepak/lazygit.nvim",
@@ -107,6 +112,13 @@ return {
           python = "python",
           -- ...
         },
+      },
+      file_browser = {
+        path = "%:p:h",
+        cwd_to_path = true,
+        select_buffer = true,
+        dir_icon = "",
+        hijack_netrw = true,
       },
     },
   },

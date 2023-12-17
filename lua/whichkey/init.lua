@@ -13,7 +13,6 @@ local mappings = {
 	-- p = { "<Cmd>BufferPin<CR>", "Pin/Unpin" },
 	E = { ":e ~/AppData/Local/nvim/init.lua<cr>", "Edit config" },
 	L = { ":e ~/AppData/Local/nvim/lua/plugins/init.lua<cr>", "Edit plugins" },
-	f = { ":Telescope find_files<cr>", "Telescope Find Files" },
 	r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
 	I = { "<cmd>IconPickerInsert<cr>", "IconPickerInsert" },
 	t = {
@@ -21,6 +20,10 @@ local mappings = {
 		t = { '<cmd> ToggleTerm<cr>', " " },
 		p = { '<cmd> TermExec cmd="python %" <CR>', "" },
 		l = { "<cmd>LazyGit<CR>", "LazyGit" },
+	},
+	f = {
+		f = { "<cmd>Telescope find_files<cr>", "Telescope Find Files" },
+		b = { "<cmd>Telescope file_browser<cr>", "File Browser" },
 	},
 	l = {
 		name = "LSP",

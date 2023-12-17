@@ -2,7 +2,7 @@ vim.loader.enable()
 local options = {
     backup = false,                                 -- creates a backup file
     clipboard = "unnamedplus",                      -- allows neovim to access the system clipboard
-    cmdheight = 1,                                  -- more space in the neovim command line for displaying messages
+    cmdheight = 0,                                  -- more space in the neovim command line for displaying messages
     completeopt = "menu,menuone,noselect,noinsert", -- mostly just for cmp
     conceallevel = 0,                               -- so that `` is visible in markdown files
     fileencoding = "utf-8",                         -- the encoding written to a file
@@ -53,7 +53,8 @@ local options = {
     winminwidth = 10,
     equalalways = true,
     breakindent = true,
-    hlsearch = false,
+    hlsearch = true,
+    shell = "C:\Users\abhir\AppData\Local\Microsoft\WindowsApps\pwsh.exe",
 
 }
 vim.g.loaded_netrw = 1
@@ -68,3 +69,6 @@ vim.opt.fillchars:append({
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
+-- Undercurl
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Ce = "\e[4:0m"]])
