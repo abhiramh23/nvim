@@ -12,7 +12,12 @@ return {
 				enable_autocmd = false,
 			},
 			config = function()
-				require("ts_context_commentstring").setup({
+				local status_ok, commentstring = pcall(require, "ts_context_commentstring")
+				if not status_ok then
+					vim.notify("ts_context_commentstring not load")
+					return
+				end
+				commentstring.setup({
 					enable_autocmd = false,
 				})
 				vim.opt.updatetime = 100
@@ -20,9 +25,16 @@ return {
 		},
 	},
 	config = function()
-		pcall(require, "treesitter")
-		require("ts_context_commentstring").setup({})
-		require("treesitter-context").setup({
+		local status_ok1, treesitter = pcall(require, "treesitter")
+		if not status_ok1 then
+			vim.notify("treesitter not load")
+		end
+		local status_ok, context = pcall(require, "treesitter-context")
+		if not status_ok then
+			vim.notify("ts_context_commentstring not load")
+			return
+		end
+		context.setup({
 			enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
 			max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
 			min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.

@@ -61,8 +61,8 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
-			-- they way you will only jump inside the snippet region
+				-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
+				-- they way you will only jump inside the snippet region
 			elseif luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()
 			elseif has_words_before() then
@@ -98,10 +98,10 @@ cmp.setup({
 			mode = "text_symbol",
 		}),
 	},
-  experimental = {
-    ghost_text = {
-      hl_group = "CmpGhostText",
-    },
+	experimental = {
+		ghost_text = {
+			hl_group = "CmpGhostText",
+		},
 	},
 })
 
@@ -115,11 +115,9 @@ local lspconfig = require("lspconfig")
 local servers = { "clangd", "rust_analyzer", "pyright", "tsserver", "lua_ls" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
-		-- on_attach = my_custom_on_attach,
 		capabilities = capabilities,
 		on_attach = function(client, bufnr)
 			local basics = require("lsp_basics")
-
 			basics.make_lsp_commands(client, bufnr)
 			basics.make_lsp_mappings(client, bufnr)
 		end,
