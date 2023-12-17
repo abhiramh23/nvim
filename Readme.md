@@ -1,9 +1,13 @@
 # :star:PLUGINS FOR NEOVIM
 
-Table Of Context
+
+<details>
+  <summary>Table Of Context</summary>
 
 - Introduction
 - Requirement
+
+</details>
 
 ## Introduction
 
