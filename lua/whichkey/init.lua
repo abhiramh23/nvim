@@ -1,18 +1,15 @@
 local wk = require("which-key")
--- wk.register(mappings, opts)
-
---local map = vim.api.nvim_set_keymap
---local opts = { noremap = true, silent = true }
 local mappings = {
 	q = { ":q!<cr>", "Quit" },
 	Q = { ":wq<cr>", "Save & Quit" },
 	w = { ":w<cr>", "Save" },
 	O = { ":NvimTreeToggle<cr>", "Open Files" },
+	v = { ":vsplit<cr>", "vertical split" },
+	h = { ":split<cr>", "horizontal split" },
 	-- x = { "<Cmd>BufferClose<CR>", "Close" },
 	-- R = { "<Cmd>BufferRestore<CR>", "Restore" },
 	-- p = { "<Cmd>BufferPin<CR>", "Pin/Unpin" },
 	E = { ":e ~/AppData/Local/nvim/init.lua<cr>", "Edit config" },
-	L = { ":e ~/AppData/Local/nvim/lua/plugins/init.lua<cr>", "Edit plugins" },
 	r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
 	I = { "<cmd>IconPickerInsert<cr>", "IconPickerInsert" },
 	t = {

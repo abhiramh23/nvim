@@ -51,10 +51,10 @@ local options = {
     fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]],
     winwidth = 10,
     winminwidth = 10,
-    equalalways = true,
+    equalalways = false,
     breakindent = true,
     hlsearch = false,
-    hidden = true
+    hidden = true,
 
 }
 vim.g.loaded_netrw = 1
