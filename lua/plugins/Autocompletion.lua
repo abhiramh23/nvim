@@ -16,10 +16,9 @@ return {
             "L3MON4D3/LuaSnip",
             version = "v2.*",
             build = "make install_jsregexp",
-            opts = {
-                history = true,
-                delete_check_events = "TextChanged",
-            },
+            config = function()
+                pcall(require, "luasnip")
+            end,
             dependencies = {
                 {
                     "rafamadriz/friendly-snippets",

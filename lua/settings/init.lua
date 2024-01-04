@@ -54,6 +54,7 @@ local options = {
     equalalways = true,
     breakindent = true,
     hlsearch = false,
+    hidden = true
 
 }
 vim.g.loaded_netrw = 1
