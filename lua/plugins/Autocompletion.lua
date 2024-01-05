@@ -45,6 +45,7 @@ return {
         "hrsh7th/cmp-nvim-lsp-document-symbol",
         "hrsh7th/cmp-nvim-lsp-signature-help",
         "lukas-reineke/cmp-under-comparator",
+        "kdheepak/cmp-latex-symbols"
     },
     config = function()
         require("autocomplition")

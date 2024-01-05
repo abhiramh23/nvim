@@ -89,6 +89,12 @@ cmp.setup({
 		{ name = "calc" },
 		{ name = "nvim_lua" },
 		{ name = "rg" },
+		{
+			name = "latex_symbols",
+			option = {
+				strategy = 0, -- mixed
+			},
+		}
 	},
 	formatting = {
 		format = lspkind.cmp_format({
