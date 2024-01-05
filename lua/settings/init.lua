@@ -57,8 +57,11 @@ local options = {
     hidden = true,
 
 }
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+local loader = {
+    loaded_nvimgdb = 1,
+    loaded_netrw = 1,
+    loaded_netrwPlugin = 1,
+}
 vim.opt.fillchars.eob = " "
 vim.opt.fillchars = vim.opt.fillchars + "vertleft: "
 vim.opt.fillchars = vim.opt.fillchars + "vertright: "
@@ -66,6 +69,9 @@ vim.opt.fillchars = vim.opt.fillchars + "eob: "
 vim.opt.fillchars:append({
     stl = " ",
 })
+for g, v in pairs(loader) do
+    vim.g[g] = v
+end
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
