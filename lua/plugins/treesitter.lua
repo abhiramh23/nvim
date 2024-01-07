@@ -2,7 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	lazy = true,
 	build = ":TSUpdate",
-    dependencies = {
+	dependencies = {
 		'nvim-treesitter/nvim-treesitter-refactor',
 		"nvim-treesitter/nvim-treesitter-context",
 		"nvim-treesitter/nvim-treesitter-textobjects",
@@ -26,7 +26,7 @@ return {
 		},
 	},
 	config = function()
-		local status_ok1, treesitter = pcall(require, "treesitter")
+		local status_ok1 = pcall(require, "treesitter")
 		if not status_ok1 then
 			vim.notify("treesitter not load")
 		end
