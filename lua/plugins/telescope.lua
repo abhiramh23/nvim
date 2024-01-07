@@ -14,6 +14,7 @@ return {
     'nvim-telescope/telescope-symbols.nvim',
     "lpoto/telescope-tasks.nvim",
     "nvim-telescope/telescope-project.nvim",
+    "LinArcX/telescope-scriptnames.nvim",
     {
       "da-moon/telescope-toggleterm.nvim",
       event = "TermOpen",
@@ -68,6 +69,7 @@ return {
     require("telescope").load_extension("toggleterm")
     require('telescope').load_extension('project')
     require('telescope').load_extension('projects')
+    require('telescope').load_extension('scriptnames')
     local default = require('telescope').extensions.tasks.generators.default
     default.all()
   end,
