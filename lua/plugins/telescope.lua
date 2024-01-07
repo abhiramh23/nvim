@@ -32,12 +32,6 @@ return {
       "nvim-telescope/telescope-file-browser.nvim",
       lazy = true,
     },
-    -- lazygit
-    {
-      "kdheepak/lazygit.nvim",
-      lazy = true,
-      cmd = "LazyGit",
-    },
     -- undo tree
     {
       "debugloop/telescope-undo.nvim",
