@@ -5,7 +5,6 @@ return {
   dependencies = {
     "tsakirist/telescope-lazy.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-    "debugloop/telescope-undo.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
     "piersolenski/telescope-import.nvim",
     "nvim-telescope/telescope-github.nvim",
@@ -38,6 +37,18 @@ return {
       lazy = true,
       cmd = "LazyGit",
     },
+    -- undo tree
+    {
+      "debugloop/telescope-undo.nvim",
+      lazy = true,
+      cmd = "Telescope undo",
+      keys = {
+        -- lazy style key map
+        "<leader>u",
+        "<cmd>Telescope undo<cr>",
+        desc = "undo history",
+      }
+    }
   },
   config = function()
     require("telescope").load_extension("file_browser")
