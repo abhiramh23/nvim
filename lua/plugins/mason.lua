@@ -3,6 +3,7 @@ return {
     dependencies = {
         {
             "williamboman/mason-lspconfig.nvim",
+            "neovim/nvim-lspconfig",
         },
         {
             "junnplus/lsp-setup.nvim",
@@ -14,7 +15,7 @@ return {
     },
     config = function()
         require("mason-lspconfig").setup({
-            ensure_installed = { "html","cssls","tsserver" },
+            ensure_installed = { "lua_ls","html", "cssls", "tsserver" },
         })
     end,
     opts = {

@@ -5,9 +5,11 @@ return {
     config = function()
         -- Setup language servers.
         local lspconfig = require('lspconfig')
-        lspconfig.pylsp.setup { on_attach = require 'virtualtypes'.on_attach }
-        lspconfig.clangd.setup { on_attach = require 'virtualtypes'.on_attach }
-        lspconfig.csharp_ls.setup { on_attach = require 'virtualtypes'.on_attach }
-        lspconfig.lua_ls.setup { on_attach = require 'virtualtypes'.on_attach }
+        local servers = {
+            "lua_ls", "html", "cssls", "tsserver"
+        }
+        for key, value in pairs(servers) do
+            lspconfig[value].setup { on_attach = require 'virtualtypes'.on_attach }
+        end
     end
 }
