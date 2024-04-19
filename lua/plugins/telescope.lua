@@ -4,7 +4,7 @@ return {
   -- or                              , branch = '0.1.x',
   dependencies = {
     "tsakirist/telescope-lazy.nvim",
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     "nvim-telescope/telescope-ui-select.nvim",
     "piersolenski/telescope-import.nvim",
     "nvim-telescope/telescope-github.nvim",
@@ -47,7 +47,7 @@ return {
   },
   config = function()
     require("telescope").load_extension("file_browser")
-    require("telescope").load_extension("fzf")
+    -- require("telescope").load_extension("fzf")
     require("telescope").load_extension("gh")
     require("telescope").load_extension("lazygit")
     require("telescope").load_extension("lazy")
@@ -59,7 +59,7 @@ return {
     require("telescope").load_extension("ui-select")
     require("telescope").load_extension("tasks")
     require('telescope').load_extension('color_names')
-    require('telescope').load_extension('luasnip')
+    -- require('telescope').load_extension('luasnip')
     require("telescope").load_extension("toggleterm")
     require('telescope').load_extension('project')
     require('telescope').load_extension('projects')

@@ -14,11 +14,11 @@ if not status_ok1 then
 	vim.notify("lspkind not load")
 	return
 end
-local status_ok2, luasnip = pcall(require, "luasnip")
-if not status_ok2 then
-	vim.notify("luasnip not load")
-	return
-end
+-- local status_ok2, luasnip = pcall(require, "luasnip")
+-- if not status_ok2 then
+-- 	vim.notify("luasnip not load")
+-- 	return
+-- end
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 cmp.setup({
 	snippet = {
