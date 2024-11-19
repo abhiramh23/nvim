@@ -26,7 +26,6 @@ configs.setup({
 		"gitcommit",
 		"gitignore",
 		"json5",
-		"julia",
 		"csv",
 		"comment",
 	},

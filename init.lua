@@ -19,8 +19,8 @@ local status_ok1 = require("lazy").setup("plugins")
 if not status_ok1 then
   vim.notify("plugins not load")
 end
-local status_ok2 = pcall(require, "keybindings")
+--  local status_ok2 = pcall(require, "keybindings")
 
-if not status_ok2 then
-  vim.notify("keybindings not load")
-end
+--  if not status_ok2 then
+--   vim.notify("keybindings not load")
+--  end
