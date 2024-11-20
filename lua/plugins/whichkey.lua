@@ -1,7 +1,10 @@
 -- Configuration for which-key.nvim
-return{
+return {
   "folke/which-key.nvim",
   event = "VeryLazy",
+  config = function()
+    require("whichkey")
+  end,
   opts = {
     -- Your custom configuration here
     -- or leave it empty to use the default settings
@@ -16,5 +19,3 @@ return{
     },
   },
 }
-
-
