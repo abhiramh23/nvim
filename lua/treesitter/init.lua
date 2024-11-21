@@ -1,15 +1,15 @@
 local configs = require("nvim-treesitter.configs")
 require("nvim-treesitter.install").prefer_git = true
 configs.setup({
-	auto_install = true,
+	auto_install = false,
 	ensure_installed = {
 		"c",
 		"lua",
 		"vim",
 		"vimdoc",
 		"query",
-        "javascript",
-        "tsx",
+		"javascript",
+		"tsx",
 		"typescript",
 		"html",
 		"regex",
@@ -29,4 +29,8 @@ configs.setup({
 		"csv",
 		"comment",
 	},
+	highlight = {
+		enable = true,
+	},
+	indent = { enable = true },
 })
